@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A'Veloz Performance Hub - Ranking de Vendedores</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1>A'Veloz Performance</h1>
+            </div>
+            <nav class="tabs">
+                <button class="tab-btn active" data-tab="podio">🏆 Pódio do Mês</button>
+                <button class="tab-btn" data-tab="pontuacao">📊 Ranking Geral</button>
+                <button class="tab-btn" data-tab="destaques">⭐ Destaques</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Filtro de Mês -->
+        <div class="filtro-mes">
+            <label for="mes-selector">Selecione o Mês:</label>
+            <select id="mes-selector">
+                <option value="">Mês Atual</option>
+                <option value="janeiro">Janeiro</option>
+                <option value="fevereiro">Fevereiro</option>
+                <option value="marco">Março</option>
+                <option value="abril">Abril</option>
+                <option value="maio">Maio</option>
+                <option value="junho">Junho</option>
+                <option value="julho">Julho</option>
+                <option value="agosto">Agosto</option>
+                <option value="setembro">Setembro</option>
+                <option value="outubro">Outubro</option>
+                <option value="novembro">Novembro</option>
+                <option value="dezembro">Dezembro</option>
+            </select>
+        </div>
+
+        <!-- Aba 1: Pódio do Mês -->
+        <section id="podio" class="tab-content active">
+            <h2 id="titulo-mes">Destaques do Mês</h2>
+            
+            <div class="podio-container">
+                <div id="podio-grid" class="podio-grid">
+                    <!-- Será preenchido pelo JavaScript -->
+                </div>
+            </div>
+
+            <!-- Destaques Especiais -->
+            <div class="destaques-especiais">
+                <div class="destaque-card">
+                    <h3>🌟 Mais Novos Clientes</h3>
+                    <p id="destaque-novos">Carregando...</p>
+                </div>
+                <div class="destaque-card">
+                    <h3>♻️ Reativação de Clientes</h3>
+                    <p id="destaque-reativacao">Carregando...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Aba 2: Ranking Geral (Pontuação Acumulada) -->
+        <section id="pontuacao" class="tab-content">
+            <h2>Ranking Geral - Pontuação Acumulada</h2>
+            <div class="tabela-ranking">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Posição</th>
+                            <th>Vendedor</th>
+                            <th>Pontos Totais</th>
+                            <th>1º Lugares</th>
+                            <th>2º Lugares</th>
+                            <th>3º Lugares</th>
+                        </tr>
+                    </thead>
+                    <tbody id="ranking-body">
+                        <tr><td colspan="6" style="text-align:center;">Carregando...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Aba 3: Destaques -->
+        <section id="destaques" class="tab-content">
+            <h2>Histórico de Destaques</h2>
+            <div class="destaques-historico">
+                <div class="destaque-historico-card">
+                    <h3>🌟 Mais Novos Clientes (Histórico)</h3>
+                    <ul id="historico-novos">
+                        <li>Carregando...</li>
+                    </ul>
+                </div>
+                <div class="destaque-historico-card">
+                    <h3>♻️ Reativação de Clientes (Histórico)</h3>
+                    <ul id="historico-reativacao">
+                        <li>Carregando...</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>A'Veloz Ind Têxtil © 2026 | Sistema de Performance</p>
+    </footer>
+
+    <script src="js/performance.js"></script>
+</body>
+</html>
